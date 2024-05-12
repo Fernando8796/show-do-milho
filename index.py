@@ -23,7 +23,7 @@ cor_botao = (242, 250, 17)
 # Função para criar botões
 def criar_botao(texto, posicao, tamanho, cor):
     retangulo = pygame.Rect(posicao, tamanho)
-    pygame.draw.rect(janela, cor, retangulo)
+    pygame.draw.rect(janela, cor, retangulo, border_radius=10)
     
     texto_renderizado = pygame.font.Font(None, 36).render(texto, True, (0, 0, 0))
     pos_texto = texto_renderizado.get_rect(center=retangulo.center)
@@ -46,9 +46,9 @@ while rodando:
     janela.blit(titulo, posicao_titulo)
 
     # Criar os botões
-    botao_jogar = criar_botao("Jogar", (300, 200), (200, 50), cor_botao)
-    botao_ranking = criar_botao("Ranking", (300, 300), (200, 50), cor_botao)
-    botao_creditos = criar_botao("Créditos", (300, 400), (200, 50), cor_botao)
+    botao_jogar = criar_botao("Jogar", (250, 200), (300, 50), cor_botao)
+    botao_ranking = criar_botao("Ranking", (250, 300), (300, 50), cor_botao)
+    botao_creditos = criar_botao("Créditos", (250, 400), (300, 50), cor_botao)
     
     # Atualizar a tela
     pygame.display.flip()
