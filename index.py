@@ -31,6 +31,10 @@ def criar_botao(texto, posicao, tamanho, cor):
     
     return retangulo
 
+# Função para verificar se o botão foi clicado
+def botao_clicado(botao, posicao_mouse):
+    return botao.collidepoint(posicao_mouse)
+
 # Loop principal do jogo
 rodando = True
 while rodando:
@@ -38,6 +42,15 @@ while rodando:
     for evento in pygame.event.get():
         if evento.type == pygame.QUIT:
             rodando = False
+        elif evento.type == pygame.MOUSEBUTTONDOWN:
+            if evento.button == 1:  # Verifica se foi o botão esquerdo do mouse
+                posicao_mouse = pygame.mouse.get_pos()
+                if botao_clicado(botao_jogar, posicao_mouse):
+                    print("O botão Jogar foi clicado!")
+                elif botao_clicado(botao_ranking, posicao_mouse):
+                    print("O botão Ranking foi clicado!")
+                elif botao_clicado(botao_creditos, posicao_mouse):
+                    print("O botão Créditos foi clicado!")
     
     # Preencher a tela com a cor de fundo
     janela.fill("#198536")
