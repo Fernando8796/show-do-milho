@@ -13,10 +13,6 @@ janela = pygame.display.set_mode(tamanho_janela)
 # Definindo o título da janela
 pygame.display.set_caption("Show do Milho")
 
-# Criando o título do jogo
-titulo = pygame.font.Font(None, 60).render("Show do Milho", True, (242, 250, 17))
-posicao_titulo = titulo.get_rect(center=(800 // 2, 100))  # Pegando a posição central do título
-
 # Definindo as cores dos botões
 cor_botao = (242, 250, 17)
 
@@ -35,33 +31,44 @@ def criar_botao(texto, posicao, tamanho, cor):
 def botao_clicado(botao, posicao_mouse):
     return botao.collidepoint(posicao_mouse)
 
-# Loop principal do jogo
-rodando = True
-while rodando:
-    # Verificar eventos (como fechamento da janela)
-    for evento in pygame.event.get():
-        if evento.type == pygame.QUIT:
-            rodando = False
-        elif evento.type == pygame.MOUSEBUTTONDOWN:
-            if evento.button == 1:  # Verifica se foi o botão esquerdo do mouse
-                posicao_mouse = pygame.mouse.get_pos()
-                if botao_clicado(botao_jogar, posicao_mouse):
-                    print("O botão Jogar foi clicado!")
-                elif botao_clicado(botao_ranking, posicao_mouse):
-                    print("O botão Ranking foi clicado!")
-                elif botao_clicado(botao_creditos, posicao_mouse):
-                    print("O botão Créditos foi clicado!")
-    
-    # Preencher a tela com a cor de fundo
-    janela.fill("#198536")
+def tela_inicial():
+
+    # Criando o título do jogo
+    titulo = pygame.font.Font(None, 60).render("Show do Milho", True, (242, 250, 17))
+    posicao_titulo = titulo.get_rect(center=(800 // 2, 100))  # Pegando a posição central do título
 
     # Escrevendo o título na tela
     janela.blit(titulo, posicao_titulo)
 
-    # Criar os botões
-    botao_jogar = criar_botao("Jogar", (250, 200), (300, 50), cor_botao)
-    botao_ranking = criar_botao("Ranking", (250, 300), (300, 50), cor_botao)
-    botao_creditos = criar_botao("Créditos", (250, 400), (300, 50), cor_botao)
+    # Criando e retornando os botões
+    return {
+        "Jogar": criar_botao("Jogar", (250, 200), (300, 50), cor_botao),
+        "Ranking" : criar_botao("Ranking", (250, 300), (300, 50), cor_botao),
+        "Creditos": criar_botao("Créditos", (250, 400), (300, 50), cor_botao)
+    }
+
+# Dicionário para as telas disponíveis
+telas = {
+    "Inicial": tela_inicial
+}
+
+# Começar com a tela inicial, mas ir mudando com o tempo
+tela_atual = "Inicial"
+
+# Loop principal do jogo
+rodando = True
+while rodando:
+    # Loop para manipular os eventos
+    for evento in pygame.event.get():
+        # Manipulando evento de saída do jogo
+        if evento.type == pygame.QUIT:
+            rodando = False
+    
+    # Preencher a tela com a cor de fundo
+    janela.fill("#198536")
+
+    # Chamando a função da tela atual
+    telas[tela_atual]()
     
     # Atualizar a tela
     pygame.display.flip()
