@@ -63,12 +63,21 @@ while rodando:
         # Manipulando evento de saída do jogo
         if evento.type == pygame.QUIT:
             rodando = False
+        elif evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
+            posicao_mouse = pygame.mouse.get_pos()
+            if botao_clicado(botoes["Jogar"], posicao_mouse):
+                print("Botão jogar clicado!")
+            elif botao_clicado(botoes["Ranking"], posicao_mouse):
+                print("Botão ranking clicado!")
+            elif botao_clicado(botoes["Creditos"], posicao_mouse):
+                print("Botão crédito clicado!")
     
     # Preencher a tela com a cor de fundo
     janela.fill("#198536")
 
     # Chamando a função da tela atual
-    telas[tela_atual]()
+    botoes = telas[tela_atual]()
+    # ^-- Vai receber os botoes da tela atual
     
     # Atualizar a tela
     pygame.display.flip()
