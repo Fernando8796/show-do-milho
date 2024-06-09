@@ -1,0 +1,167 @@
+[
+    {
+        "pergunta": "Quem descobriu o brasil?",
+        "alternativas": ["Lula", "Cristóvão Colombo", "Pedro Álvares Cabral", "Neymar"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Quem é o mais seguido do instagram?",
+        "alternativas": ["Will Smith", "Taylor Swift", "Pelé", "Cristiano Ronaldo"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Qual o símbolo da adição?",
+        "alternativas": ["+", "-", "%", "*"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Quanto é 6x81?",
+        "alternativas": ["240", "560", "1090", "486"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Qual o jogador com mais gols oficiais da história?",
+        "alternativas": ["Gustavo Coutinho", "Cristiano Ronaldo", "Pelé", "Lionel Messi"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual o coletivo de lobo?",
+        "alternativas": ["Cardume", "Lobisomem", "Alcateia", "Manada"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual o protagonista de Dragon Ball?",
+        "alternativas": ["Naruto", "Goku", "Vegeta", "Jaspion"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual continente a Espanha está localizada?",
+        "alternativas": ["América do Sul", "Ásia", "África", "Europa"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Qual seleção venceu a copa do mundo de 1998?",
+        "alternativas": ["Brasil", "Argentina", "Alemanha", "França"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Quais foram os países mais importantes da guerra fria?",
+        "alternativas": ["Estados Unidos e Brasil", "China e Japão", "Rússia e Itália", "Estados Unidos e União Soviética"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Qual é a capital do Brasil?",
+        "alternativas": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Quem escreveu 'Dom Quixote'?",
+        "alternativas": ["Machado de Assis", "Miguel de Cervantes", "Willian Shakespeare", "Franz Kafka"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual é o maior planeta do sistema solar?",
+        "alternativas": ["Terra", "Júpiter", "Marte", "Saturno"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual o símbolo químico do ouro?",
+        "alternativas": ["Ag", "Au", "Fe", "Hg"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Quem é o autor da obra filosófica 'Além do Bem e do Mal'?",
+        "alternativas": ["Immanuel Kant", "Friedrich Nietzsche", "Jean-Paul Sartre", "Sigmund Freud"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual o menor país do mundo em área territorial?",
+        "alternativas": ["Mônaco", "Vaticano", "Nauru", "San Marino"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Quem foi o primeiro ser humano a viajar para o espaço?",
+        "alternativas": ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Alan Shepard"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Em que ano ocorreu a Revolução Francesa?",
+        "alternativas": ["1789", "1804", "1832", "1776"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Quem foi o autor da Teoria da Relatividade?",
+        "alternativas": ["Isaac Newton", "Albert Einstein", "Max Planck", "Stephen Hawking"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual é a capital da França?",
+        "alternativas": ["Berlim", "Madri", "Paris", "Lisboa"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual o elemento químico representado pelo símbolo 'O'?",
+        "alternativas": ["Ouro", "Oxigênio", "Prata", "Hidrogênio"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual desses animais é um mamífero?",
+        "alternativas": ["Tubarão", "Crocodilo", "Baleia", "Papagaio"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual a fórmula química da água?",
+        "alternativas": ["H2O", "CO2", "NaCl", "H2SO4"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Quem pintou Mona Lisa?",
+        "alternativas": ["Van Gogh", "Picasso", "Leonardo da Vinci", "Claude Monet"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual é a moeda oficial do Japão?",
+        "alternativas": ["Yuan", "Won", "Yen", "Dólar"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual o país mais populoso do mundo?",
+        "alternativas": ["Índia", "Estados Unidos", "Indonésia", "China"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual o diretor da icônica obra 'Interestelar'?",
+        "alternativas": ["Quentin Tarantino", "James Gunn", "Christopher Nolan", "Stanley Kubrick"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual é o planeta conhecido por seus longos 'anéis'?",
+        "alternativas": ["Marte", "Júpiter", "Saturno", "Netuno"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual o nome do cantor e músico, que compôs a ilustre música 'Cálice'?",
+        "alternativas": ["Chico Buarque", "Jorge Ben Jor", "Cartola", "Cazuza"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Onde se localiza a famosa estátua do Cristo Redentor?",
+        "alternativas": ["Rio de Janeiro", "Campina Grande", "São Paulo", "Rio Grande do Sul"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual a fruta conhecida por ter uma coroa?",
+        "alternativas": ["Laranja", "Pitaya", "Kiwi", "Abacaxi"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Quem pintou o intrigante quadro 'O grito'?",
+        "alternativas": ["Van Gogh", "Picasso", "Leonardo da Vinci", "Edvard Much"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "De quem é a música Black Sabbath, do álbum Black Sabbath?",
+        "alternativas": ["Ac/dc", "The beatles", "Black Sabbath", "Pantera"],
+        "resposta": 2
+    }
+]

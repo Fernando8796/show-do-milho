@@ -78,6 +78,7 @@ while rodando:
         elif evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
             # Pegando a posição do mouse
             posicao_mouse = pygame.mouse.get_pos()
+            # Cndições para trocar de tela
             if botao_clicado(botoes["Jogar"], posicao_mouse):
                 tela_atual = "Jogar"
             elif botao_clicado(botoes["Ranking"], posicao_mouse):
