@@ -1,4 +1,6 @@
 import pygame
+import json
+import random
 
 # Inicializar o pygame
 pygame.init()
@@ -50,6 +52,13 @@ def tela_inicial():
 
 # Função que vai ser o modelo da tela jogar
 def tela_jogar():
+
+    # Criando o título do jogo
+    pergunta = pygame.font.Font(None, 30).render("Pergunta Teste", True, (242, 250, 17))
+
+    # Escrevendo a pergunta na tela
+    janela.blit(pergunta, (50, 50))
+
     return {
         "Resposta1": criar_botao("Resposta1", (90, 320), (300, 70), cor_botao), 
         "Resposta2": criar_botao("Resposta2", (410, 320), (300, 70), cor_botao),
@@ -65,6 +74,13 @@ telas = {
 
 # Começar com a tela inicial, mas ir mudando com o tempo
 tela_atual = "Inicial"
+
+# Abrindo o arquivo
+with open('database.json', 'r') as arquivo:
+    dados = json.load(arquivo)
+
+# Pegando 13 perguntas aleatórias da base de dados
+perguntas = random.sample(dados, 13)
 
 # Loop principal do jogo
 rodando = True
