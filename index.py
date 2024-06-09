@@ -50,7 +50,12 @@ def tela_inicial():
 
 # Função que vai ser o modelo da tela jogar
 def tela_jogar():
-    return 0
+    return {
+        "Resposta1": criar_botao("Resposta1", (90, 320), (300, 70), cor_botao), 
+        "Resposta2": criar_botao("Resposta2", (410, 320), (300, 70), cor_botao),
+        "Resposta3": criar_botao("Resposta3", (90, 410), (300, 70), cor_botao),
+        "Resposta4": criar_botao("Resposta4", (410, 410), (300, 70), cor_botao)
+    }
 
 # Dicionário para as telas disponíveis
 telas = {
@@ -89,7 +94,7 @@ while rodando:
     
     # Atualizar a tela
     pygame.display.flip()
-    clock.tick(60)  # limitar o FPS para 60
+    clock.tick(10)  # limitar o FPS para 10
 
 # Encerrar o jogo
 pygame.quit()
