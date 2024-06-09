@@ -65,6 +65,9 @@ def tela_jogar():
     global tela_atual
     global rodando
 
+    if questao >= 12:
+        tela_atual = "Inicial"
+    
     # Criando o texto que vai conter o número da questão
     numeroQuestao = pygame.font.Font(None, 30).render(f"Pergunta Nº {questao + 1}", True, (242, 250, 17))
     janela.blit(numeroQuestao, (50, 50))
