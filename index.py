@@ -62,7 +62,7 @@ def tela_jogar():
 
     global questao # Declarada como global para evitar erro de escopo
 
-    # Criando a pergunta
+    # Criando o texto que vai conter o número da questão
     numeroQuestao = pygame.font.Font(None, 30).render(f"Pergunta Nº {questao + 1}", True, (242, 250, 17))
     janela.blit(numeroQuestao, (50, 50))
 
@@ -115,6 +115,7 @@ while rodando:
             posicao_mouse = pygame.mouse.get_pos()
 
             if tela_atual == "Inicial":
+                #Clicando no botão de Jogar
                 if botao_clicado(pygame.Rect((250, 200), (300, 50)), posicao_mouse):
                     tela_atual = "Jogar"
     
