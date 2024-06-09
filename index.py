@@ -31,6 +31,7 @@ def criar_botao(texto, posicao, tamanho, cor):
 def botao_clicado(botao, posicao_mouse):
     return botao.collidepoint(posicao_mouse)
 
+# Função que vai ser o modelo da tela inicial
 def tela_inicial():
 
     # Criando o título do jogo
@@ -47,9 +48,14 @@ def tela_inicial():
         "Creditos": criar_botao("Créditos", (250, 400), (300, 50), cor_botao)
     }
 
+# Função que vai ser o modelo da tela jogar
+def tela_jogar():
+    return 0
+
 # Dicionário para as telas disponíveis
 telas = {
-    "Inicial": tela_inicial
+    "Inicial": tela_inicial,
+    "Jogar": tela_jogar
 }
 
 # Começar com a tela inicial, mas ir mudando com o tempo
@@ -63,16 +69,18 @@ while rodando:
         # Manipulando evento de saída do jogo
         if evento.type == pygame.QUIT:
             rodando = False
+        # Se o evento foi o clique do botão esquerdo 
         elif evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
+            # Pegando a posição do mouse
             posicao_mouse = pygame.mouse.get_pos()
             if botao_clicado(botoes["Jogar"], posicao_mouse):
-                print("Botão jogar clicado!")
+                tela_atual = "Jogar"
             elif botao_clicado(botoes["Ranking"], posicao_mouse):
                 print("Botão ranking clicado!")
             elif botao_clicado(botoes["Creditos"], posicao_mouse):
                 print("Botão crédito clicado!")
     
-    # Preencher a tela com a cor de fundo
+    # Tela de fundo do jogo
     janela.fill("#198536")
 
     # Chamando a função da tela atual
