@@ -60,7 +60,10 @@ def tela_inicial():
 # Função que vai ser o modelo da tela jogar
 def tela_jogar():
 
-    global questao # Declarada como global para evitar erro de escopo
+    # Variáveis declaradas globais aqui dentro para evitar erro
+    global questao
+    global tela_atual
+    global rodando
 
     # Criando o texto que vai conter o número da questão
     numeroQuestao = pygame.font.Font(None, 30).render(f"Pergunta Nº {questao + 1}", True, (242, 250, 17))
@@ -77,6 +80,8 @@ def tela_jogar():
 
     # Pegar os eventos dos botões, para ver se acertou ou não
     for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            rodando = False
         if evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
             posicao_mouse = pygame.mouse.get_pos()
 
