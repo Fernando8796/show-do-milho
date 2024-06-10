@@ -19,13 +19,12 @@ pygame.display.set_caption("Show do Milho")
 cor_botao = (242, 250, 17)
 
 # Abrindo o arquivo
-with open('database.json', 'r') as arquivo:
+with open('database.json', 'r', encoding='utf-8') as arquivo:
     dados = json.load(arquivo)
 
 # Pegando 13 perguntas aleatórias da base de dados
 perguntas = random.sample(dados, 13)
 questao = 0
-
 
 # Função para criar botões
 def criar_botao(texto, posicao, tamanho, cor):
@@ -55,7 +54,6 @@ def tela_inicial():
     criar_botao("Jogar", (250, 200), (300, 50), cor_botao)
     criar_botao("Ranking", (250, 300), (300, 50), cor_botao)
     criar_botao("Créditos", (250, 400), (300, 50), cor_botao)
-        
 
 # Função que vai ser o modelo da tela jogar
 def tela_jogar():
@@ -65,6 +63,7 @@ def tela_jogar():
     global tela_atual
     global rodando
 
+    # Quando completar todas as questões, ele sai da tela de jogo
     if questao >= 12:
         tela_atual = "Inicial"
     
