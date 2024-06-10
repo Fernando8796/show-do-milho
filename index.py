@@ -75,33 +75,22 @@ def tela_jogar():
     pergunta = pygame.font.Font(None, 30).render(perguntas[questao]["pergunta"], True, (242, 250, 17))
     janela.blit(pergunta, (50, 80))
 
-    btn0 = criar_botao(perguntas[questao]["alternativas"][0], (90, 320), (300, 70), cor_botao)
-    btn1 = criar_botao(perguntas[questao]["alternativas"][1], (410, 320), (300, 70), cor_botao)
-    btn2 = criar_botao(perguntas[questao]["alternativas"][2], (90, 410), (300, 70), cor_botao)
-    btn3 = criar_botao(perguntas[questao]["alternativas"][3], (410, 410), (300, 70), cor_botao)
-
-    # Pegar os eventos dos botões, para ver se acertou ou não
-    for evento in pygame.event.get():
-        if evento.type == pygame.QUIT:
-            rodando = False
-        if evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
-            posicao_mouse = pygame.mouse.get_pos()
-
-            if botao_clicado(btn0, posicao_mouse):
-                if perguntas[questao]["resposta"] == 0:
-                    questao += 1
-            elif botao_clicado(btn1, posicao_mouse):
-                if perguntas[questao]["resposta"] == 1:
-                    questao += 1
-            elif botao_clicado(btn2, posicao_mouse):
-                if perguntas[questao]["resposta"] == 2:
-                    questao += 1
-            elif botao_clicado(btn3, posicao_mouse):
-                if perguntas[questao]["resposta"] == 3:
-                    questao += 1
+    # Criando todos os botões das alternativas
+    criar_botao(perguntas[questao]["alternativas"][0], (90, 320), (300, 70), cor_botao)
+    criar_botao(perguntas[questao]["alternativas"][1], (410, 320), (300, 70), cor_botao)
+    criar_botao(perguntas[questao]["alternativas"][2], (90, 410), (300, 70), cor_botao)
+    criar_botao(perguntas[questao]["alternativas"][3], (410, 410), (300, 70), cor_botao)
 
 # Começar com a tela inicial, mas ir mudando com o tempo
 tela_atual = "Inicial"
+
+# Botões vai ser um dicionário, e vai receber todos os botões da tela
+botoes_tela_jogar = {
+    "btn0": pygame.Rect((90, 320), (300, 70)),
+    "btn1": pygame.Rect((410, 320), (300, 70)),
+    "btn2": pygame.Rect((90, 410), (300, 70)),
+    "btn3": pygame.Rect((410, 410), (300, 70))
+}
 
 # Loop principal do jogo
 rodando = True
@@ -119,7 +108,12 @@ while rodando:
                 #Clicando no botão de Jogar
                 if botao_clicado(pygame.Rect((250, 200), (300, 50)), posicao_mouse):
                     tela_atual = "Jogar"
+            
+            if tela_atual == "Jogar":
+                if botao_clicado(botoes_tela_jogar["btn0"], posicao_mouse):
+                    print("Botão 0 clicado")
     
+
     # Tela de fundo do jogo
     janela.fill("#198536")
 
@@ -128,7 +122,6 @@ while rodando:
         tela_inicial()
     elif tela_atual == "Jogar":
         tela_jogar()
-    
     
     # Atualizar a tela
     pygame.display.flip()
