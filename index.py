@@ -100,12 +100,6 @@ def tela_jogar():
                 if perguntas[questao]["resposta"] == 3:
                     questao += 1
 
-# Dicionário para as telas disponíveis
-telas = {
-    "Inicial": tela_inicial,
-    "Jogar": tela_jogar
-}
-
 # Começar com a tela inicial, mas ir mudando com o tempo
 tela_atual = "Inicial"
 
@@ -130,7 +124,11 @@ while rodando:
     janela.fill("#198536")
 
     # Chamando a função da tela atual
-    telas[tela_atual]()
+    if tela_atual == "Inicial":
+        tela_inicial()
+    elif tela_atual == "Jogar":
+        tela_jogar()
+    
     
     # Atualizar a tela
     pygame.display.flip()
