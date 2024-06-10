@@ -22,8 +22,8 @@ cor_botao = (242, 250, 17)
 with open('database.json', 'r', encoding='utf-8') as arquivo:
     dados = json.load(arquivo)
 
-# Pegando 13 perguntas aleatórias da base de dados
-perguntas = random.sample(dados, 13)
+# Pegando 14(considerar -1) perguntas aleatórias da base de dados
+perguntas = random.sample(dados, 14)
 questao = 0
 
 # Função para criar botões
@@ -64,7 +64,7 @@ def tela_jogar():
     global rodando
 
     # Quando completar todas as questões, ele sai da tela de jogo
-    if questao >= 12:
+    if questao >= 13:
         tela_atual = "Inicial"
     
     # Criando o texto que vai conter o número da questão
