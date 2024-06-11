@@ -22,9 +22,18 @@ cor_botao = (242, 250, 17)
 with open('database.json', 'r', encoding='utf-8') as arquivo:
     dados = json.load(arquivo)
 
-# Pegando 14(considerar -1) perguntas aleatórias da base de dados
 perguntas = random.sample(dados, 14)
 questao = 0
+
+# Função para pegar 14 perguntas da base de dados (desconsiderar uma)
+def pegarQuestoesNovas():
+
+    # Pegando essa variáveis do escopo global
+    global perguntas
+    global questao
+
+    perguntas = random.sample(dados, 14)
+    questao = 0
 
 # Função para criar botões
 def criar_botao(texto, posicao, tamanho, cor):
@@ -123,15 +132,27 @@ while rodando:
                 if botao_clicado(botoes["tela_jogar"]["btn0"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 0:
                         questao += 1
+                    else:
+                        tela_atual = "Inicial"
+                        pegarQuestoesNovas()
                 elif botao_clicado(botoes["tela_jogar"]["btn1"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 1:
                         questao += 1
+                    else:
+                        tela_atual = "Inicial"
+                        pegarQuestoesNovas()
                 elif botao_clicado(botoes["tela_jogar"]["btn2"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 2:
                         questao += 1
+                    else:
+                        tela_atual = "Inicial"
+                        pegarQuestoesNovas()
                 elif botao_clicado(botoes["tela_jogar"]["btn3"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 3:
                         questao += 1
+                    else:
+                        tela_atual = "Inicial"
+                        pegarQuestoesNovas()
                 
     
 
