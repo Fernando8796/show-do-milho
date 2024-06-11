@@ -83,12 +83,19 @@ def tela_jogar():
 # Começar com a tela inicial, mas ir mudando com o tempo
 tela_atual = "Inicial"
 
-# Botões vai ser um dicionário, e vai receber todos os botões da tela
-botoes_tela_jogar = {
-    "btn0": pygame.Rect((90, 320), (300, 70)),
-    "btn1": pygame.Rect((410, 320), (300, 70)),
-    "btn2": pygame.Rect((90, 410), (300, 70)),
-    "btn3": pygame.Rect((410, 410), (300, 70))
+# Botões vai ser um dicionário, e vai receber todos os botões das telas
+botoes = {
+    "tela_inicial": {
+        "Jogar": pygame.Rect((250, 200), (300, 50)),
+        "Ranking": pygame.Rect((250, 300), (300, 50)),
+        "Creditos": pygame.Rect((250, 400), (300, 50))
+    },
+    "tela_jogar": {
+        "btn0": pygame.Rect((90, 320), (300, 70)),
+        "btn1": pygame.Rect((410, 320), (300, 70)),
+        "btn2": pygame.Rect((90, 410), (300, 70)),
+        "btn3": pygame.Rect((410, 410), (300, 70))
+    }
 }
 
 # Loop principal do jogo
@@ -105,20 +112,24 @@ while rodando:
 
             if tela_atual == "Inicial":
                 #Clicando no botão de Jogar
-                if botao_clicado(pygame.Rect((250, 200), (300, 50)), posicao_mouse):
+                if botao_clicado(botoes["tela_inicial"]["Jogar"], posicao_mouse):
                     tela_atual = "Jogar"
+                if botao_clicado(botoes["tela_inicial"]["Ranking"], posicao_mouse):
+                    print("Botão Ranking clicado")
+                if botao_clicado(botoes["tela_inicial"]["Creditos"], posicao_mouse):
+                    print("Botão Créditos clicado")
             
             if tela_atual == "Jogar":
-                if botao_clicado(botoes_tela_jogar["btn0"], posicao_mouse):
+                if botao_clicado(botoes["tela_jogar"]["btn0"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 0:
                         questao += 1
-                elif botao_clicado(botoes_tela_jogar["btn1"], posicao_mouse):
+                elif botao_clicado(botoes["tela_jogar"]["btn1"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 1:
                         questao += 1
-                elif botao_clicado(botoes_tela_jogar["btn2"], posicao_mouse):
+                elif botao_clicado(botoes["tela_jogar"]["btn2"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 2:
                         questao += 1
-                elif botao_clicado(botoes_tela_jogar["btn3"], posicao_mouse):
+                elif botao_clicado(botoes["tela_jogar"]["btn3"], posicao_mouse):
                     if perguntas[questao]["resposta"] == 3:
                         questao += 1
                 
