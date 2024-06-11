@@ -153,8 +153,6 @@ while rodando:
                     else:
                         tela_atual = "Inicial"
                         pegarQuestoesNovas()
-                
-    
 
     # Tela de fundo do jogo
     janela.fill("#198536")
