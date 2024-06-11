@@ -74,6 +74,7 @@ def tela_jogar():
     # Quando completar todas as questões, ele sai da tela de jogo
     if questao >= 13:
         tela_atual = "Inicial"
+        pegarQuestoesNovas()
     
     # Criando o texto que vai conter o número da questão
     numeroQuestao = pygame.font.Font(None, 30).render(f"Pergunta Nº {questao + 1}", True, (242, 250, 17))
