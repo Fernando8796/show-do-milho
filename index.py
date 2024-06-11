@@ -58,10 +58,9 @@ def tela_inicial():
 # Função que vai ser o modelo da tela jogar
 def tela_jogar():
 
-    # Variáveis declaradas globais aqui dentro para evitar erro
-    global questao
+    # Variáveis declaradas globais aqui dentro para evitar erros de escopo
     global tela_atual
-    global rodando
+    global questao
 
     # Quando completar todas as questões, ele sai da tela de jogo
     if questao >= 13:
@@ -111,7 +110,18 @@ while rodando:
             
             if tela_atual == "Jogar":
                 if botao_clicado(botoes_tela_jogar["btn0"], posicao_mouse):
-                    print("Botão 0 clicado")
+                    if perguntas[questao]["resposta"] == 0:
+                        questao += 1
+                elif botao_clicado(botoes_tela_jogar["btn1"], posicao_mouse):
+                    if perguntas[questao]["resposta"] == 1:
+                        questao += 1
+                elif botao_clicado(botoes_tela_jogar["btn2"], posicao_mouse):
+                    if perguntas[questao]["resposta"] == 2:
+                        questao += 1
+                elif botao_clicado(botoes_tela_jogar["btn3"], posicao_mouse):
+                    if perguntas[questao]["resposta"] == 3:
+                        questao += 1
+                
     
 
     # Tela de fundo do jogo
