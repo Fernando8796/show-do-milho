@@ -163,5 +163,35 @@
         "pergunta": "De quem é a música Black Sabbath, do álbum Black Sabbath?",
         "alternativas": ["Ac/dc", "The beatles", "Black Sabbath", "Pantera"],
         "resposta": 2
+    },
+    {
+        "pergunta": "Qual o maior órgão do corpo humano?",
+        "alternativas": ["Pele", "Intestino", "Pulmão", "Fêmur"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Quem é o maior artilheiro da seleção Brasileira?",
+        "alternativas": ["Ronaldo Fenômeno", "Pelé", "Flávio Caça Rato", "Neymar"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "Em qual continente fica localizado o México?",
+        "alternativas": ["América do Norte", "América do Sul", "Europa", "África"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual a tradução de 'Hope'?",
+        "alternativas": ["Lupa", "Roupa", "Esperança", "Fé"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual o maior buraco negro já descoberto?",
+        "alternativas": ["TON-618", "M87", "Cygnus X-1", "Sagittarius A*"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual país tem pirâmide como ponto turístico?",
+        "alternativas": ["África do Sul", "Egito", "Grécia", "Chile"],
+        "resposta": 1
     }
 ]
